@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #5d7aff;
+        --secondary-color: #1e1e1e;
+        --text-color: #f0f0f0;
+        --light-text: #b0b0b0;
+        --border-color: #444;
+    }
+
+    body {
+        background-color: #121212;
+    }
+
+    .site-header {
+        background-color: #1e1e1e;
+    }
+
+    .calculator-container {
+        background-color: #2d2d2d;
+    }
+
+    .result-container {
+        background-color: #252525;
+    }
+
+    .site-footer {
+        background-color: #1a1a1a;
+    }
+}
