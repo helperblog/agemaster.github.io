@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgeMaster Pro - Accurate Age Calculator Tool</title>
+    <meta name="description" content="Free online age calculator tool. Calculate your exact age in years, months, days, hours and minutes. Perfect for birthdays, anniversaries and special events.">
+    <meta name="keywords" content="age calculator, birthday calculator, how old am I, date calculator, age in days">
+    <meta name="author" content="AgeMaster Pro">
+    <meta property="og:title" content="AgeMaster Pro - Accurate Age Calculator Tool">
+    <meta property="og:description" content="Free online age calculator tool. Calculate your exact age in years, months, days, hours and minutes.">
+    <meta property="og:image" content="https://agemaster.github.io/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://agemaster.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://agemaster.github.io">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" media="(prefers-color-scheme: dark)">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AgeMaster Pro",
+        "url": "https://agemaster.github.io",
+        "description": "Accurate age calculator tool",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="AgeMaster Pro Logo" class="logo">
+                    <span>AgeMaster Pro</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="language-switcher">
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                        </select>
+                    </li>
+                    <li><button id="dark-mode-toggle">Dark Mode</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-section">
+            <h1>Age Calculator</h1>
+            <div class="calculator-container">
+                <div class="input-group">
+                    <label for="birth-date">Birth Date:</label>
+                    <input type="date" id="birth-date" required>
+                </div>
+                <div class="input-group">
+                    <label for="as-of-date">As of Date:</label>
+                    <input type="date" id="as-of-date">
+                </div>
+                <button id="calculate-btn" class="btn-primary">Calculate Age</button>
+                <div class="result-container">
+                    <div id="result"></div>
+                </div>
+            </div>
+            
+            <div class="share-buttons">
+                <button class="share-btn" data-type="facebook">Share on Facebook</button>
+                <button class="share-btn" data-type="twitter">Share on Twitter</button>
+                <button class="share-btn" data-type="whatsapp">Share on WhatsApp</button>
+            </div>
+        </section>
+
+        <section class="home-content">
+            <!-- Content from home-content.html will be inserted here by JavaScript -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="current-year"></span> AgeMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        // Load home content
+        fetch('home-content.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.home-content').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
